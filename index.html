@@ -1,1 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Hackeando el Aula</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons from Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Clase para las transiciones de las diapositivas */
+        .slide {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .slide.hidden {
+            opacity: 0;
+            transform: scale(0.95);
+            position: absolute;
+            pointer-events: none;
+        }
+        .slide:not(.hidden) {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Contenedor principal de la presentación -->
+    <div class="w-full max-w-4xl mx-auto">
+        <!-- Contenedor de las diapositivas -->
+        <div id="slide-container" class="relative bg-slate-800 rounded-2xl shadow-2xl w-full aspect-video flex items-center justify-center p-8 md:p-16 overflow-hidden">
+            
+            <!-- Diapositiva 1 -->
+            <div class="slide w-full h-full flex flex-col items-center justify-center text-center">
+                <img src="https://placehold.co/600x300/1e293b/ffffff?text=Imagen+Inspiradora" alt="Grupo de adolescentes colaborando" class="rounded-lg mb-8 shadow-lg w-full max-w-md">
+                <h1 class="text-5xl md:text-7xl font-black text-indigo-400 tracking-tight">Hackeando el Aula</h1>
+                <p class="mt-4 text-xl md:text-2xl text-slate-300">Dejemos de hablar de inclusión y empecemos a hacerla.</p>
+            </div>
+
+            <!-- Diapositiva 2 -->
+            <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Spoiler Alert: <span class="text-amber-400">Ya están aquí.</span></h2>
+                <img src="https://i.imgur.com/uGgPlqL.png" alt="Gráfico del crecimiento de la matrícula en secundaria" class="rounded-lg my-4 shadow-lg w-full max-w-lg border-2 border-slate-700">
+                <p class="text-lg md:text-xl max-w-2xl text-slate-300">"Colegas, esto no es el futuro, es el presente. La cantidad de chicos con proyectos de integración en secundaria se cuadruplicó. La pregunta no es si van a llegar más, sino qué vamos a hacer cuando lleguen mañana a nuestra clase."</p>
+            </div>
+
+            <!-- Diapositiva 3 -->
+            <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center">
+                 <i class="ph-light ph-identification-badge text-7xl text-red-400 mb-4"></i>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Las barreras <span class="text-red-400">no tienen DNI.</span></h2>
+                <p class="text-lg md:text-xl max-w-2xl text-slate-300">"El problema no es el diagnóstico del pibe. El problema es nuestro diseño de clase. Una barrera es una clase donde la única opción es escucharme a mí durante 80 minutos. Pensemos: ¿cuántas opciones damos?"</p>
+            </div>
+
+            <!-- Diapositiva 4 -->
+            <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center">
+                <i class="ph-light ph-plugs-connected text-7xl text-cyan-400 mb-4"></i>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">La tecnología es <span class="text-cyan-400">nuestra aliada.</span></h2>
+                <p class="text-lg md:text-xl max-w-2xl mb-6 text-slate-300">"No necesitamos ser expertos en cada discapacidad. Necesitamos ser expertos en dar opciones. El <strong>DUA</strong> es eso."</p>
+                <div class="text-left space-y-3 text-lg">
+                    <p><strong class="text-cyan-300">Para el que se distrae:</strong> Un video corto en lugar de un texto largo.</p>
+                    <p><strong class="text-cyan-300">Para el que le cuesta escribir:</strong> Que grabe un audio de WhatsApp explicando el tema.</p>
+                    <p><strong class="text-cyan-300">Para el que no se anima a hablar:</strong> Que participe en un foro online o en un Kahoot.</p>
+                </div>
+            </div>
+
+            <!-- Diapositiva 5 -->
+            <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center">
+                <i class="ph-light ph-steps text-7xl text-lime-400 mb-4"></i>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Empecemos por <span class="text-lime-400">algo chico.</span></h2>
+                 <p class="text-lg md:text-xl max-w-2xl mb-6 text-slate-300">"No hay que cambiar todo de un día para el otro."</p>
+                <ol class="text-left space-y-4 text-lg list-decimal list-inside">
+                    <li><strong>La próxima evaluación:</strong> Pensemos una forma alternativa de hacerla. Una sola.</li>
+                    <li><strong>Un recurso:</strong> Subamos un video o un podcast junto con la fotocopia de siempre.</li>
+                    <li><strong>Preguntemos:</strong> "Chicos, ¿de qué otra forma podrían mostrarme que entendieron esto?".</li>
+                </ol>
+            </div>
+
+            <!-- Diapositiva 6 -->
+            <div class="slide hidden w-full h-full flex flex-col items-center justify-center text-center">
+                 <i class="ph-light ph-rocket-launch text-7xl text-violet-400 mb-4"></i>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6"><span class="text-violet-400">¿Arrancamos?</span></h2>
+                <p class="text-lg md:text-xl max-w-2xl mb-6 text-slate-300">"La inclusión no es un acto de caridad, es un acto de buena pedagogía. Mejora la clase para TODOS."</p>
+                <p class="text-xl md:text-2xl font-bold text-slate-100 mt-4">"¿Cuál es el primer pequeño paso que se animan a dar en su próxima clase?"</p>
+            </div>
+
+        </div>
+
+        <!-- Controles de navegación y contador -->
+        <div class="flex items-center justify-between mt-6 w-full">
+            <!-- Botón Anterior -->
+            <button id="prevBtn" class="flex items-center gap-2 bg-slate-700 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                <i class="ph ph-arrow-left text-xl"></i>
+                Anterior
+            </button>
+            
+            <!-- Contador de diapositivas -->
+            <div id="slideCounter" class="text-slate-400 font-semibold">
+                Diapositiva 1 / 6
+            </div>
+            
+            <!-- Botón Siguiente -->
+            <button id="nextBtn" class="flex items-center gap-2 bg-slate-700 hover:bg-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Siguiente
+                <i class="ph ph-arrow-right text-xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Lógica de la presentación
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slideCounter');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Función para mostrar la diapositiva actual y actualizar los controles
+            function showSlide(index) {
+                // Ocultar todas las diapositivas
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                    } else {
+                        slide.classList.add('hidden');
+                    }
+                });
+
+                // Actualizar el contador
+                slideCounter.textContent = `Diapositiva ${index + 1} / ${totalSlides}`;
+
+                // Habilitar o deshabilitar botones de navegación
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+            }
+
+            // Event listener para el botón "Siguiente"
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Event listener para el botón "Anterior"
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Mostrar la primera diapositiva al cargar la página
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
 
